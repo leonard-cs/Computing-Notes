@@ -1,0 +1,119 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Main Function": {
+        "prefix": "main",
+        "body": [
+			"def main():",
+			"\treturn",
+			"",
+            "if __name__ == '__main__':",
+            "\t${1:main()}",
+			"",
+        ],
+        "description": "Main function entry point"
+    },
+	"Class Definition": {
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName}:",
+            "\tdef __init__(self, ${2:args}):",
+            "\t\t${3:# TODO: initialize}",
+			"",
+        ],
+        "description": "Class definition"
+	},
+	"For Loop": {
+        "prefix": "forloop",
+        "body": [
+            "for ${1:item} in range($2):",
+            "\t${3:# TODO: implement}",
+			"",
+        ],
+        "description": "For loop template"
+    },
+	"Case Handling (Match-Case)": {
+        "prefix": "case",
+        "body": [
+            "match ${1:term}:",
+    		"\tcase ${2:pattern1}:",
+         	"\t\tpass",
+    		"\tcase ${3:pattern2}:",
+         	"\t\tpass",
+    		"\tcase ${4:pattern3}:",
+         	"\t\tpass",
+    		"\tcase _:",
+        	"\t\t# TODO: action-default",
+			"",
+        ],
+        "description": "Insert a case handling structure using match-case"
+    },
+    "LeetCode Test Case Template": {
+        "prefix": "test_solution",
+        "body": [
+            "import unittest",
+            "from ${1:solution_v1} import Solution",
+            "",
+            "class TestSolution(unittest.TestCase):",
+            "\tdef setUp(self):",
+            "\t\tself.sol = Solution()",
+            "",
+            "\tdef test_case_1(self):",
+            "\t\tinput_data = $2",
+            "\t\texpected_output = $3",
+            "\t\tself.assertEqual(self.sol.${4:your_function}(input_data), expected_output)",
+            "",
+            "if __name__ == '__main__':",
+            "\tunittest.main()",
+            "",
+        ],
+        "description": "Snippet for solution of pandas leetcode"
+    },
+    "Solution for Pandas LeetCode": {
+        "prefix": "solution_pandas",
+        "body": [
+            "$1",
+            "if __name__ == '__main__':",
+            "\t$2",
+            "\t${3:data_frame}.to_csv('data.csv', index=False)",
+            "\tresult = ${4:function_name}($3)",
+            "\tprint(result)",
+            "",
+        ],
+        "description": "Snippet for solution of pandas leetcode"
+    },
+    "Unit Test with Pandas DataFrame": {
+        "prefix": "test_pandas",
+        "body": [
+            "import unittest",
+            "import pandas as pd",
+            "from ${1:solution_v1} import ${2:function_name}",
+            "",
+            "class TestSolution(unittest.TestCase):",
+            "\tdef setUp(self):",
+            "\t\tself.df = pd.read_csv('${3:data.csv}.reset_index(drop=True)')",
+            "",
+            "\tdef test_case_1(self):",
+            "\t\tresult = ${2:function_name}(self.df)",
+            "\t\tdata = $4",
+            "\t\texpected = pd.DataFrame(data)",
+            "\t\tpd.testing.assert_frame_equal(result, expected)",
+            "",
+            "if __name__ == '__main__':",
+            "\tunittest.main()",
+            "",
+        ],
+        "description": "Set up a unit test with pandas DataFrame"
+    },
+}
