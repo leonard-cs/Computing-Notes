@@ -1,0 +1,9 @@
+[user]
+	name = Leonard Chi
+	email = leonardocompsci@gmail.com
+	# email = lc3223@ic.ac.uk
+	# email = leonardochi168@gmail.com
+[core]
+	editor = code --wait
+	autocrlf = input # mac/linux
+	# autocrlf = true # windows
