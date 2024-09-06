@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+## Python
+# Byte-compiled files
+__pycache__/
+# Python virtual environment
+.venv/
+
+## Java
+# Compiled class files
+*.class
+
+## Gradle
+# Gradle build output
+build/
+# Gradle wrapper files
+.gradle/
