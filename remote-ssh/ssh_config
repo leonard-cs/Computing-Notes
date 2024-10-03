@@ -1,0 +1,13 @@
+Host ray01
+    HostName ray01.doc.ic.ac.uk
+    User lc3223
+    ProxyJump shell1
+
+Host shell1
+    HostName shell1.doc.ic.ac.uk
+    User lc3223
+
+Host sinica
+    HostName 192.168.107.42
+    User leonard
+    Port 9002
