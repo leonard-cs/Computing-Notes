@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "donjayamanne.python-extension-pack",
+        "ms-toolsai.jupyter",
+        "christian-kohler.path-intellisense",
+        "github.vscode-pull-request-github",
+        "aaron-bond.better-comments",
+        "charliermarsh.ruff",
+        "pkief.material-icon-theme",
+        "akamud.vscode-theme-onedark",
+    ]
+}
