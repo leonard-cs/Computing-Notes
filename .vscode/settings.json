@@ -9,9 +9,13 @@
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "charliermarsh.ruff",
+
+    // Python settings
     "[python]": {
         "editor.formatOnType": true,
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.cwd": "${workspaceFolder}/tests",
 }
