@@ -8,5 +8,7 @@
         "charliermarsh.ruff",
         "pkief.material-icon-theme",
         "zhuangtongfa.material-theme",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
     ]
 }

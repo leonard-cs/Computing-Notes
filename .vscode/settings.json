@@ -1,6 +1,6 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "One Dark Pro Night Flat",
     "material-icon-theme.folders.associations": {
         "venv": "environment",
         "references": "docs",
