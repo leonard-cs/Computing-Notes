@@ -30,13 +30,41 @@ Activate the virtual environment:
 source /vol/bitbucket/lc3223/.venv/bin/activate
 ```
 
-## 3. Install JupyterLab
+## 3. Configure Cache and Runtime Directories
+```bash
+mkdir -p /vol/bitbucket/lc3223/.hf_cache
+mkdir -p /vol/bitbucket/lc3223/.jupyter_runtime
+```
+add them to your `~/.bashrc`:
+```bash
+export JUPYTER_RUNTIME_DIR=/vol/bitbucket/lc3223/.jupyter_runtime
+export JUPYTER_DATA_DIR=/vol/bitbucket/lc3223/.jupyter_data
+export JUPYTER_CONFIG_DIR=/vol/bitbucket/lc3223/.jupyter_config
+
+export HF_HOME=/vol/bitbucket/lc3223/.hf_cache
+export TRANSFORMERS_CACHE=/vol/bitbucket/lc3223/.hf_cache
+export HF_DATASETS_CACHE=/vol/bitbucket/lc3223/.hf_cache/datasets
+export HUGGINGFACE_HUB_CACHE=/vol/bitbucket/lc3223/.hf_cache/hub
+
+export PIP_CACHE_DIR=/vol/bitbucket/lc3223/.cache/pip
+export MPLCONFIGDIR=/vol/bitbucket/lc3223/.cache/matplotlib
+export TORCH_HOME=/vol/bitbucket/lc3223/.cache/torch
+export WANDB_DIR=/vol/bitbucket/lc3223/.wandb
+```
+Then reload:
+```bash
+source ~/.bashrc
+```
+
+
+## 4. Install JupyterLab
 To install JupyterLab, run the following command:
 ```bash
 pip install jupyterlab
 ```
 
-## 4. Request GPU Resources
+
+## 5. Request GPU Resources
 To request GPU resources, use the salloc command:
 ```bash
 salloc --gres=gpu:1
@@ -54,7 +82,8 @@ You can also monitor GPU usage with nvidia-smi:
 nvidia-smi
 ```
 
-## 5. Access JupyterLab Remotely
+
+## 6. Access JupyterLab Remotely
 To access JupyterLab on the cluster remotely, create an SSH tunnel to forward the JupyterLab port (default is 8899):
 ```bash
 ssh -N -L 8899:127.0.0.1:8899 lc3223@<machine_name>
@@ -68,7 +97,8 @@ Finally, connect to the Jupyter kernel running on the cluster.
 1. Click on the **Kernel** in the top-right corner of the notebook and choose **Select Another Kernel**.
 2. Paste the link and select the kernel running on `127.0.0.1`.
 
-## 6. Cancel Job
+
+## 7. Cancel Job
 To cancel a running job, use the following command:
 ```bash
 scancel <job ID>
