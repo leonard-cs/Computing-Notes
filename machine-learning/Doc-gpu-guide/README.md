@@ -86,7 +86,7 @@ nvidia-smi
 ## 6. Access JupyterLab Remotely
 To access JupyterLab on the cluster remotely, create an SSH tunnel to forward the JupyterLab port (default is 8899):
 ```bash
-ssh -N -L 8899:127.0.0.1:8899 lc3223@<machine_name>
+ssh -N -L 8899:127.0.0.1:8899 lc3223@
 ```
 Then, start JupyterLab:
 ```bash

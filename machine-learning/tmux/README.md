@@ -20,7 +20,7 @@ python -m jupyterlab --no-browser --ip=127.0.0.1 --port=8899
 ```
 Set up SSH port forwarding (from your local machine)
 ```bash
-ssh -N -L 8899:127.0.0.1:8899 lc3223@<machine_name>
+ssh -N -L 8899:127.0.0.1:8899 lc3223@
 ```
 Detach from tmux session (session keeps running in the background)
 Press:

@@ -17,6 +17,10 @@ Homebrew:
 ```bash
 brew install uv
 ```
+Verify:
+```bash
+uv --version
+```
 
 ## Project & Dependency Management
 Initialize a project:
@@ -46,6 +50,8 @@ uv run pytest
 Create a venv:
 ```bash
 uv venv
+uv python install 3.11
+echo "3.11" > .python-version
 uv venv --python 3.11
 ```
 Install packages (pip style):
